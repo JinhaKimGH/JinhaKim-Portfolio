@@ -52,15 +52,22 @@ html{
 }
 
 .nav-list-item{
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
 }
 
 .nav-list-item > .material-icons{
   margin-right: 5px;
+  margin-bottom: 3px;
+  vertical-align: middle;
+  font-size: 0.8rem;
+}
+
+.nav-list-item:hover{
+  cursor: pointer;
 }
 
 .switch{
@@ -76,4 +83,17 @@ html{
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+
+.nav-list-item::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--user-color);
+  transition: width .3s;
+}
+
+.nav-list-item:hover::after{
+  width: 100%;
 }
