@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import About from './components/About';
+import Skills from './components/Skills';
 
 /**
  * App Component
@@ -22,8 +24,12 @@ function App(): JSX.Element {
 
   return (
     <div className={darkMode}>
-      {/* The Navbar component */}
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode}></Navbar>
+      {/* The Navbar Component */}
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
+      {/* The About Section */}
+      <About darkMode={darkMode}/>
+      {/* The Skills Section */}
+      <Skills darkMode={darkMode}/>
     </div>
   )
 }

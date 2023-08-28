@@ -11,6 +11,7 @@ import ReactSwitch from "react-switch";
 */
 export default function DarkModeToggle(props: {darkMode: string, setDarkMode: React.Dispatch<React.SetStateAction<string>>}): JSX.Element{
 
+    // Function that sets the darkMode property to dark/light depending on the switch's condition
     function handleChange(val: boolean){
         if (val){
             props.setDarkMode('dark')

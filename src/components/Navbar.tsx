@@ -1,3 +1,4 @@
+import { SyntheticEvent } from "react";
 import DarkModeToggle from "./DarkModeToggle"
 
 /**
@@ -12,6 +13,31 @@ export default function Navbar(props: {darkMode: string,  setDarkMode: React.Dis
     // User Color css variable is set depending on whether the site is in dark or light mode
     const style = {"--user-color": `${props.darkMode == 'dark' ? '#fff' : '#333'}`} as React.CSSProperties;
 
+    // Scrolls into the section when it is clicked on in the navbar
+    function handleClickScroll(event : SyntheticEvent){
+        const input = event.target as HTMLElement;
+        
+        if (input.classList.contains('nav-list-item')){
+            // Filters out all child nodes that are text nodes, concatenates their content, gets rid of the span element text
+            const textContent = Array.from(input.childNodes).filter(node => node.nodeType === Node.TEXT_NODE).map(textNode => textNode.textContent).join('');
+
+            const text = textContent.trim().toLowerCase();
+            const element = document.getElementById(text)
+
+            if (element){
+                element.scrollIntoView({ behavior: 'smooth' })
+            }
+
+        }
+
+        else{
+            const element = document.getElementById(input.innerText.toLowerCase())
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
+
     return (
         <nav className={`navbar ${props.darkMode}`}>
             {/* Navbar component contains the title, the different sections of the page, and the dark/light mode toggle */}
@@ -20,14 +46,14 @@ export default function Navbar(props: {darkMode: string,  setDarkMode: React.Dis
             </div>
             <ul className="nav-items">
                 <li style={style}>
-                    <a className="nav-list-item">
+                    <a className="nav-list-item" onClick={handleClickScroll}>
                         <span className="material-icons">
                             person
                         </span>About
                     </a>
                 </li>
                 <li style={style}>
-                    <a className="nav-list-item">
+                    <a className="nav-list-item" onClick={handleClickScroll}>
                         <span className="material-icons">
                             architecture
                         </span>Skills
@@ -35,7 +61,7 @@ export default function Navbar(props: {darkMode: string,  setDarkMode: React.Dis
                 </li>
 
                 <li style={style}>
-                    <a className="nav-list-item">
+                    <a className="nav-list-item" onClick={handleClickScroll}>
                         <span className="material-icons">
                             token
                         </span>Projects
@@ -43,7 +69,7 @@ export default function Navbar(props: {darkMode: string,  setDarkMode: React.Dis
                 </li>
 
                 <li style={style}>
-                    <a className="nav-list-item">
+                    <a className="nav-list-item" onClick={handleClickScroll}>
                         <span className="material-icons">
                             work
                         </span>Work Experience
@@ -51,7 +77,7 @@ export default function Navbar(props: {darkMode: string,  setDarkMode: React.Dis
                 </li>
 
                 <li style={style}>
-                    <a className="nav-list-item">
+                    <a className="nav-list-item" onClick={handleClickScroll}>
                         <span className="material-icons">
                             emoji_events
                         </span>Awards
