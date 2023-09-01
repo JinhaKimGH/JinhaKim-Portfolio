@@ -2,6 +2,9 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Awards from './components/Awards';
 
 /**
  * App Component
@@ -30,6 +33,12 @@ function App(): JSX.Element {
       <About darkMode={darkMode}/>
       {/* The Skills Section */}
       <Skills darkMode={darkMode}/>
+      {/* The Projects Section */}
+      <Projects darkMode={darkMode}/>
+      {/* The Work Experience Section */}
+      <Experience darkMode={darkMode}/>
+      {/* The Awards Section */}
+      <Awards darkMode={darkMode} />
     </div>
   )
 }

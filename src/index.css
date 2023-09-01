@@ -5,6 +5,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   font-family: 'Montserrat', sans-serif;;
+  --border-color: #404040;
+  font-size: calc(15px + 0.390625vw);
 }
 
 html{
@@ -14,10 +16,11 @@ html{
 *{
   padding: 0;
   margin: 0;
+  transition: color 0.25s ease, background-color 0.5s ease;
 }
 
 .dark {
-  background-color: #0A0C10;
+  background-color: #121212;
   color: #fff;
 }
 
@@ -28,12 +31,12 @@ html{
 
 .navbar{
   display: flex;
-  padding: 1% 10%;
+  padding: 1% 20px;
   align-items: center;
   z-index: 200;
   position: fixed;
   top: 0;
-  width: 80%;
+  width: 98vw;
 }
 
 .nav-items{
@@ -43,7 +46,8 @@ html{
   align-items: center;
   list-style: none;
   list-style-type: none;
-  width: 50%;
+  padding-left: 20px;
+  flex: 1;
   justify-content: space-between;
 }
 
@@ -52,6 +56,7 @@ html{
   font-weight: 600;
   display: flex;
   align-items: center;
+  width: 10%;
 }
 
 .nav-list-item{
@@ -66,7 +71,7 @@ html{
   margin-right: 5px;
   margin-bottom: 3px;
   vertical-align: middle;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .nav-list-item:hover{
@@ -86,6 +91,9 @@ html{
   display: flex;
   align-items: center;
   margin-left: auto;
+  justify-content: right;
+  width: 10%;
+  padding-right: 20px;
 }
 
 .nav-list-item::after{
@@ -150,11 +158,20 @@ h1{
   border-right: 1px solid var(--user-color);
 }
 
+.about-pic-container{
+  width: 40%;
+}
+
 .about-picture{
   border: none;
   border-radius: 50px;
-  width: 40%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 50%;
+  box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,  
+              100%, 0.075),
+              0 0 0 1px hsla(0, 0%, 0%, 0.05),
+              0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+              0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+              0 3.5px 6px hsla(0, 0%, 0%, 0.09);
 }
 
 .contact{
@@ -163,8 +180,13 @@ h1{
   margin-top: 10px;
 }
 
+.contact-icon{
+  transition: all 1s;
+}
+
 .contact-icon:hover{
   transform: translateY(5px);
+  transition: all 1s;
 }
 
 .skills{
@@ -177,6 +199,7 @@ h1{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  min-height: 400px;
 }
 
 .skill-left, .skill-right, .skill-middle{
@@ -188,6 +211,14 @@ h1{
   width: 41.5%;
 }
 
+.experience > .header > .line{
+  width: 37%;
+}
+
+.projects > .header > .line{
+  width: 40%;
+}
+
 h4{
   font-weight: 400;
   font-size: 1rem;
@@ -195,17 +226,24 @@ h4{
   text-align: center;
 }
 
-.row{
+.skill-matrix{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   height: 95px;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
+  row-gap: 30px;
 }
 
 .icon{
-  width: 15%;
+  width: 33%;
+}
+
+.icon > p{
+  width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .icon > img{
@@ -228,4 +266,204 @@ h4{
 
 .icon > p{
   font-size: 0.8rem;
+}
+
+.projects{
+  padding-top: 100px;
+}
+
+.project-card{
+  max-width: 90%;
+  width: 400px;
+  box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,  
+              100%, 0.075),
+              0 0 0 1px hsla(0, 0%, 0%, 0.05),
+              0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+              0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+              0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+  border-radius: 8px;
+  transition: all 1s;
+  text-decoration: none;
+}
+
+.project-image{
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.project-languages{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-language{
+  margin: 5px 5px 0px 5px;
+  padding: 2px 5px;
+  font-size: 0.6rem;
+  background-color: #6d99db79;
+  border-radius: 10px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-info{
+  padding: 30px;
+}
+
+.project-title{
+  font-size: 1.2rem;
+  padding: 10px 0 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-description{
+  font-size: 0.6rem;
+}
+
+.project-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  column-gap: 40px;
+  margin-top: 30px;
+}
+
+.project-card:hover{
+  cursor:pointer;
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+@media (max-width: 1000px){
+  .icon > img{
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 750px){
+  .experience-trigger > h3{
+    font-size: 0.7rem !important;
+  }
+
+  .experience-trigger > p{
+    font-size: 0.5rem !important;
+  }
+}
+
+
+.experience, .awards{
+  padding-top: 100px;
+}
+
+.work-experience-container{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.single-experience{
+  margin-top: 45px;
+  min-height: 100px;
+  width: 85%;
+  border-top-color: var(--border-color);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-color: var(--border-color);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  overflow: hidden;
+  transition: min-height 0.5s ease-in-out;
+}
+
+.single-experience.active{
+  min-height: 245px;
+  transition: min-height 1s ease-in-out;
+}
+
+.single-experience.inactive{
+  transition: min-height 1s ease-in-out;
+  min-height: 100px;
+}
+
+.experience-icon{
+  height: auto;
+  width: 6%;
+}
+
+.experience-trigger{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+.experience-trigger > h3{
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 50%;
+  max-height: 90%;
+  overflow-y: hidden;
+}
+
+.experience-trigger:hover{
+  cursor: pointer;
+}
+
+.experience-trigger > p, .expanded-experience > p{
+  font-size: 0.75rem;
+  line-height: 24px;
+}
+
+.experience-trigger > p{
+  margin-left: auto;
+}
+
+.accordion-button{
+  border: none
+}
+
+.empty-space{
+  height: 20px;
+}
+
+.awards{
+  padding-bottom: 100px;
+}
+
+.award{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+  gap: 20px;
+  padding: 30px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.awards-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.award > img{
+  height: 90%;
+}
+
+.award > h2{
+  font-size: 1rem;
+}
+
+.summary{
+  text-align: center;
+  margin-bottom: 20px;
 }
