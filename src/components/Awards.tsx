@@ -26,6 +26,7 @@ export default function Awards(props: {darkMode: string}): JSX.Element{
             <div className='awards-container'>
                 {awards.map((award) => 
                     <Award
+                        key={award.name}
                         darkMode={props.darkMode}
                         award={award}
                     />)}

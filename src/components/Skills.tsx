@@ -63,7 +63,7 @@ export default function Skills(props: {darkMode: string}): JSX.Element{
                 </div>
                 <div className='middle-break' style={style}></div>
                 <div className='skill-middle'>
-                    <h4>Frameworks, Libraries, & Databases</h4>
+                    <h4>Frameworks & Databases</h4>
 
                     <div className='skill-matrix'>
                         
