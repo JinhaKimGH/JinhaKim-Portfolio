@@ -91,16 +91,6 @@ export default function Hamburger(props: {darkMode: string}): JSX.Element{
                             </p>            
                         </div>
                     </Menu.Item>
-                    <Menu.Item className={'dropdown-menu'} onClick={handleClickScroll} id='Contact'>
-                        <div className={`dropdown-item ${props.darkMode}`}>
-                            <span className="material-icons" id='Contact'>
-                                contact_page
-                            </span>
-                            <p className='section-name' id='Contact'>
-                                Contact
-                            </p>  
-                        </div>
-                    </Menu.Item>
                 </Menu.Dropdown>
             </Menu>
         </div>

@@ -1,6 +1,6 @@
 # Jinha Kim Portfolio Website
 
-A website to display my skills, projects, work experiences and awards.
+A website to display my skills, projects, work experiences and awards. Access this website [here](www.jinhakim.ca)
 
 ## 🚀 Run Locally
 
@@ -19,7 +19,7 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  npm install
+  npm install --legacy-peer-deps
 ```
 
 Start the server

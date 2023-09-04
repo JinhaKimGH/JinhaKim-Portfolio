@@ -180,7 +180,7 @@ h1{
 
 .contact{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 10px;
 }
 
@@ -215,11 +215,15 @@ h1{
 }
 
 .experience > .header > .line{
-  width: 37%;
+  width: 36%;
 }
 
 .projects > .header > .line{
   width: 40%;
+}
+
+.awards > .header > .line{
+  width: 41%;
 }
 
 h4{

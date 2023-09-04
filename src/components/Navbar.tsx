@@ -92,18 +92,6 @@ export default function Navbar(props: {darkMode: string,  setDarkMode: React.Dis
                         </p>            
                     </a>
                 </li>
-
-                <li style={style}>
-                    <a className="nav-list-item" onClick={handleClickScroll}>
-                        <span className="material-icons">
-                            contact_page
-                        </span>
-                        <p className='section-name'>
-                            Contact
-                        </p>             
-                    </a>
-                </li>
-
             </ul>
             <DarkModeToggle darkMode={props.darkMode} setDarkMode={props.setDarkMode}/>
         </nav>
