@@ -20,7 +20,7 @@ export const experience_list = [
     {
         title: "Software Developer Intern",
         company: "Principle Inc.",
-        date: "September 2020 - January 2021",
+        date: "September 2019 - January 2020",
         icon: "principleinc-icon.png",
         description: "<p>Utilized <strong>JavaScript</strong> and <strong>HTML</strong> to develop a form which clients could use to supply content for a new event. Mitigated bugs by testing forms, product releases, databases, and addressing bugs in tickets assigned to me. Increased test coverage by <strong>15%</strong> for product releases by testing user input, email sending/receiving and database input for online forms.</p>",
         location: "Richmond Hill, Ontario, Canada"
