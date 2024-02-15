@@ -17,7 +17,7 @@ export default function About(props: {darkMode: string}): JSX.Element{
         <div id="about" className={`about ${props.darkMode}`}>
             <div className='about-container'>
                 <div className='about-pic-container'>
-                    <img className='about-picture' src='jinhakim.jpeg'></img>
+                    <img className='about-picture' src='jinhakim.jpg'></img>
                 </div>
                 <div className='about-summary'>
                     <div className='header'style={style}>
