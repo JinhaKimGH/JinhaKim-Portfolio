@@ -1,5 +1,13 @@
 export const experience_list = [
     {
+        title: "Software Developer Intern",
+        company: "RBC",
+        date: "January 2024 - April 2024",
+        icon: "rbc-icon.png",
+        description: "<p>Worked with the IAM Security Development team to integrate new features into the backend APIs written in <strong>Java</strong> and <strong>Springboot</strong> and design frontend applications written in <strong>Angular</strong>. Took initiative to identify and address a bottleneck in the client onboarding process, leveraging consumer and stakeholder feedback and self-driven problem solving. Enhanced the client onboarding API architecture by developing a user interface with <strong>Angular</strong>, adding RESTful backend endpoints with <strong>Java</strong> and <strong>Springboot</strong>, and unit tests with <strong>JUnit</strong>. Resulting in a 98% reduction in Onboarding time.",
+        location: "Toronto, Ontario, Canada"
+    },
+    {
         title: "Systems Software Developer Intern",
         company: "Untether AI",
         date: "September 2022 - December 2022",

@@ -27,17 +27,7 @@ export default function Skills(props: {darkMode: string}): JSX.Element{
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
                             <p>Python</p>
                         </div>
-
-                        <div className='icon'>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                            <p>HTML</p>
-                        </div>
-
-                        <div className='icon'>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                            <p>CSS</p>
-                        </div>
-
+                        
                         <div className='icon'>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
                             <p>JavaScript</p>
@@ -49,6 +39,17 @@ export default function Skills(props: {darkMode: string}): JSX.Element{
                         </div>
 
                         <div className='icon'>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                            <p>HTML</p>
+                        </div>
+
+                        <div className='icon'>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                            <p>CSS</p>
+                        </div>
+
+
+                        <div className='icon'>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
                             <p>C</p>
                         </div>
@@ -56,6 +57,11 @@ export default function Skills(props: {darkMode: string}): JSX.Element{
                         <div className='icon'>
                             <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" />
                             <p>C++</p>
+                        </div>
+
+                        <div className='icon'>
+                            <img src="https://cdn-icons-png.freepik.com/512/919/919854.png" />
+                            <p>Java</p>
                         </div>
 
                     </div>
@@ -68,6 +74,16 @@ export default function Skills(props: {darkMode: string}): JSX.Element{
                     <div className='skill-matrix'>
                         
                         <div className='icon'>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                            <p>ReactJS</p>    
+                        </div>
+
+                        <div className='icon'>
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/angular-icon-logo-svg-vector.svg" />
+                            <p>Angular</p>    
+                        </div>
+
+                        <div className='icon'>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                             <p>NodeJS</p>
                         </div>
@@ -78,16 +94,10 @@ export default function Skills(props: {darkMode: string}): JSX.Element{
                         </div>
 
                         <div className='icon'>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                            <p>ReactJS</p>    
+                            <img src="https://static-00.iconduck.com/assets.00/spring-icon-256x256-2efvkvky.png" />
+                            <p>Spring</p>    
                         </div>
-                    
 
-                    
-                        <div className='icon'>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
-                            <p>JEST</p>
-                        </div>
 
                         <div className='icon'>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
@@ -105,13 +115,23 @@ export default function Skills(props: {darkMode: string}): JSX.Element{
                         </div>
 
                         <div className='icon'>
+                            <img src="https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png" />
+                            <p>Redis</p>
+                        </div>
+
+                        <div className='icon'>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
                             <p>Firebase</p>
                         </div>
 
                         <div className='icon'>
-                            <img src="https://cdn.freebiesupply.com/logos/large/2x/pug-logo-png-transparent.png" />
-                            <p>Pug</p>    
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
+                            <p>JEST</p>
+                        </div>
+
+                        <div className='icon'>
+                            <img src="https://junit.org/junit5/assets/img/junit5-logo.png" />
+                            <p>JUnit</p>
                         </div>
                     </div>
                 </div>
@@ -136,13 +156,33 @@ export default function Skills(props: {darkMode: string}): JSX.Element{
                         </div>
 
                         <div className='icon'>
+                            <img src="https://static-00.iconduck.com/assets.00/file-type-maven-icon-192x256-wb8b12w6.png" />
+                            <p>Maven</p>
+                        </div>
+
+                        <div className='icon'>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
                             <p>Docker</p>
                         </div>
 
                         <div className='icon'>
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-openshift-283020.png?f=webp" />
+                            <p>OpenShift</p>
+                        </div>
+
+                        <div className='icon'>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
                             <p>Linux</p>
+                        </div>
+
+                        <div className='icon'>
+                            <img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" />
+                            <p>Jira</p>
+                        </div>
+
+                        <div className='icon'>
+                            <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_confluence_icon_130672.png" />
+                            <p>Confluence</p>
                         </div>
                     </div>
                 </div>

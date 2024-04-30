@@ -31,7 +31,7 @@ export default function WorkExperience(props: {darkMode: string, experience: Exp
             {/* The expanded details of the experience */}
             <div>
                 <AccordionPanel className='expanded-experience' pb={4}>
-                    <p><strong>{props.experience.date}</strong></p>
+                    <p className="experience-p"><strong>{props.experience.date}</strong></p>
                     {ReactHtmlParser(props.experience.description)}
                     <div className='empty-space'></div>
                 </AccordionPanel>

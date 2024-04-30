@@ -448,8 +448,13 @@ h4{
 }
 
 .experience-icon{
-  height: auto;
-  width: 6%;
+  height: 70%;
+  margin-left: 1%;
+  width: auto;
+}
+
+.experience-p{
+  margin: 1% 0;
 }
 
 .experience-trigger{
