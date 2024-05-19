@@ -14,11 +14,11 @@ export default function ProjectCard(props: {darkMode: string, project: Project})
             <img className="project-image" src={props.project.image}/>
 
             <div className='project-info'>
+                <h2 className='project-title'>{props.project.name}</h2>
+                <p className='project-description'>{props.project.description}</p>
                 <div className='project-languages'>
                     {props.project.languages.map((language) => <div className="project-language" key={language}>{language}</div>)}
                 </div>
-                <h2 className='project-title'>{props.project.name}</h2>
-                <p className='project-description'>{props.project.description}</p>
             </div>
         </a>
     )

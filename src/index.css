@@ -16,7 +16,7 @@ html{
 *{
   padding: 0;
   margin: 0;
-  transition: color 0.25s ease, background-color 0.5s ease;
+  transition: color 0.25s ease, background-color 0.5s ease !important;
 }
 
 .dark {
@@ -105,7 +105,7 @@ html{
   width: 0;
   height: 2px;
   background: var(--user-color);
-  transition: width .3s;
+  transition: width .3s !important;
 }
 
 .nav-list-item:hover::after{
@@ -185,12 +185,12 @@ h1{
 }
 
 .contact-icon{
-  transition: all 1s;
+  transition: all 1s !important;
 }
 
 .contact-icon:hover{
   transform: translateY(5px);
-  transition: all 1s;
+  transition: all 1s !important;
 }
 
 .skills{
@@ -243,7 +243,7 @@ h4{
 }
 
 .icon{
-  width: 33%;
+  width: 25%;
 }
 
 .icon > p{
@@ -255,12 +255,12 @@ h4{
 .icon > img{
   width: 80%;
   height: auto;
-  transition: all 1s;
+  transition: all 1s !important;
 }
 
 .icon > img:hover{
   transform: translateY(-10px);
-  transition: all 1s;
+  transition: all 1s !important;
 }
 
 .icon >img:hover+.hover-text{
@@ -292,7 +292,7 @@ h4{
               0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
               0 3.5px 6px hsla(0, 0%, 0%, 0.09);
   border-radius: 8px;
-  transition: all 1s;
+  transition: all 1s !important;
   text-decoration: none;
 }
 
@@ -306,21 +306,22 @@ h4{
 .project-languages{
   display: flex;
   flex-wrap: wrap;
+  margin-top: 8px;
 }
 
 .project-language{
-  margin: 5px 5px 0px 5px;
+  margin: 5px 5px 0px 0px;
   padding: 2px 5px;
-  font-size: 0.6rem;
-  background-color: #6d99db79;
+  font-size: 0.53rem;
+  background-color: #74c1fc7a;
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .project-info{
-  padding: 30px;
+  padding: 5px 30px 30px 30px;
 }
 
 .project-title{
@@ -345,8 +346,8 @@ h4{
 
 .project-card:hover{
   cursor:pointer;
-  transform: scale(1.1);
-  transition: all 1s;
+  transform: scale(1.01);
+  transition: all 1s !important;
 }
 
 @media(max-width: 900px){
@@ -426,7 +427,7 @@ h4{
 .single-experience{
   margin-top: 45px;
   min-height: 100px;
-  width: 85%;
+  width: 60%;
   border-top-color: var(--border-color);
   border-top-style: solid;
   border-top-width: 1px;
@@ -434,16 +435,16 @@ h4{
   border-bottom-style: solid;
   border-bottom-width: 1px;
   overflow: hidden;
-  transition: min-height 0.5s ease-in-out;
+  transition: min-height 0.5s ease-in-out !important;
 }
 
 .single-experience.active{
   min-height: 245px;
-  transition: min-height 1s ease-in-out;
+  transition: min-height 1s ease-in-out !important;
 }
 
 .single-experience.inactive{
-  transition: min-height 1s ease-in-out;
+  transition: min-height 1s ease-in-out !important;
   min-height: 100px;
 }
 
@@ -465,7 +466,7 @@ h4{
 }
 
 .experience-trigger > h3{
-  font-size: 1rem;
+  font-size: 0.8rem;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 50%;
@@ -520,7 +521,7 @@ h4{
 }
 
 .award > h2{
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .summary{
