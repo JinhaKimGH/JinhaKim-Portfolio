@@ -2,6 +2,14 @@
 
 export const projects = [
     {
+        name: "Rendezvous Radar",
+        description: "Find activities near you with AI!",
+        languages: ["React", "Django", "JavaScript", "TypeScript", "Python", "Torch", "BERT"],
+        image: "rendezvousradar.png",
+        link: "https://github.com/rendezvous-radar/RendezvousRadar"
+    },
+
+    {
         name: "Fakebook",
         description: "A social media app that allows you to connect with your friends!",
         languages: ["React", "NodeJS", "JavaScript", "TypeScript", "Express", "MongoDB", "HTML", "CSS"],
@@ -16,13 +24,5 @@ export const projects = [
         languages: ["React", "JavaScript", "Firebase", "HTML", "CSS"],
         image: "basketballcourtfinder-screenshot.png",
         link: "https://github.com/JinhaKimGH/Basketball-Court-Finder"
-    },
-    
-    {
-        name: "To Do Service",
-        description: "A service that allows users to add and view their own todos!",
-        languages: ["Spring", "Spring-Mvc", "Spring-Security", "Jsp", "Jpa-Hibernate", "H2-Database"],
-        image: "todoservice-screenshot.png",
-        link: "https://github.com/JinhaKimGH/ToDoService"
     }
 ]
