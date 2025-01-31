@@ -13,6 +13,7 @@ export interface Project{
     languages: Array<string>
     image: string
     link: string
+    live: string | undefined
 }
 
 export interface AwardType{

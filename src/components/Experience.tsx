@@ -1,6 +1,21 @@
-import { experience_list } from "../data/WorkExperiences";
-import WorkExperience from "./WorkExperience";
-import { Accordion } from '@chakra-ui/react'
+import { Flex, Heading, Text } from "@chakra-ui/react"
+import {
+  TimelineConnector,
+  TimelineContent,
+  TimelineDescription,
+  TimelineItem,
+  TimelineRoot,
+  TimelineTitle,
+} from "@/components/ui/timeline";
+import {
+  AccordionItem,
+  AccordionItemContent,
+  AccordionItemTrigger,
+  AccordionRoot,
+} from "@/components/ui/accordion"
+import { Avatar } from "@/components/ui/avatar"
+import parse from 'html-react-parser';
+import { experience_list } from "@/data/WorkExperiences";
 
 /**
  * Experience Component
@@ -9,26 +24,98 @@ import { Accordion } from '@chakra-ui/react'
  * @param {string} props.darkMode - The dark property that determines the color styling of the page
  * @returns {JSX.Element} A React JSX element representing the Experience component, contains all my work experience
 */
-export default function Experience(props: {darkMode: string}): JSX.Element{
-    // User Color css variable is set depending on whether the site is in dark or light mode
-    const style = {"--user-color": `${props.darkMode == 'dark' ? '#fff' : '#333'}`} as React.CSSProperties;
+export default function Experience(): JSX.Element{
 
-    return (
-        <div id="work experience" className={`experience ${props.darkMode}`}>
-            <div className='header'style={style}>
-                <div className='line'></div>
-                <h1>Work Experience</h1>
-                <div className='line'></div>
-            </div>
+  return (
+    <Flex 
+      direction="column" 
+      alignItems="center"
+      mt="10vh"
+    >
+      <Heading
+        fontSize="2xl"
+        width={{base: "90%", "md": "70%", "lg": "70%"}}
+        textAlign={{base: "center", md: "center", lg: "left"}}
+      >
+        Experiences
+      </Heading>
+      <TimelineRoot 
+        maxW={{base: "90%", "md": "80%", "lg": "70%"}} 
+        size={"xl"}
+        marginTop="7"
+      >
+        { experience_list.map((experience, index) => (
+          <TimelineItem key={index}>
+            <TimelineConnector>
+                <Avatar
+                  size="full"
+                  name={`${experience.company} icon`}
+                  src={experience.icon} 
+                />
+            </TimelineConnector>
+            <TimelineContent>
+              {/* Company Name + Date */}
+              <Flex 
+                justify="space-between" 
+                align={{md: "center", lg: "center" }}
+                flexDirection={{ base: "column", md: "row", lg: "row" }}
+              >
+                <TimelineTitle fontSize={{ base: "lg", md: "xl", lg: "xl" }} fontWeight="semibold">
+                  {experience.company}
+                </TimelineTitle>
+                <Text fontSize="sm" color="gray.500">
+                  {experience.date}
+                </Text>
+              </Flex>
 
-            <Accordion className="work-experience-container" allowToggle>
-                {experience_list.map((experience) => 
-                    <WorkExperience 
-                        darkMode={props.darkMode} 
-                        experience={experience} 
-                        key={experience.company}
-                    />)}
-            </Accordion>
-        </div>
-    )
+              {/* Role */}
+              <TimelineDescription>{ experience.title }</TimelineDescription>
+
+              {/* Description */}
+              <Text 
+                textStyle="sm"
+              >
+                {experience.overview}
+              </Text>
+              <AccordionRoot width="full" collapsible variant="plain">
+                <AccordionItem value={`item-${index}`}>
+                  <h2>
+                    <AccordionItemTrigger
+                      _hover={{ cursor: "pointer" }}
+                    >
+                      <Text 
+                        fontSize="sm" 
+                        flex="1" 
+                        textAlign="left"
+                        _hover={{color: "#2ECC71"}}
+                      >
+                        More Details
+                      </Text>
+                    </AccordionItemTrigger>
+                  </h2>
+                  <AccordionItemContent pb={4}>
+                    {experience.points.map((point, index) => (
+                      <Flex key={index} align="flex-start" marginBottom="4">
+                        <span style={{ marginRight: '5px' }}>•</span>
+                        <span>
+                          {parse(point, {
+                            replace: (domNode) => {
+                              if (domNode.type === "tag" && domNode.name === "strong") {
+                                const childNode = domNode.children[0] as unknown as Text;
+                                return <strong style={{ color: "#2ECC71" }}>{childNode.data}</strong>;
+                              }
+                            }
+                          })}
+                        </span>
+                      </Flex>
+                    ))}
+                  </AccordionItemContent>
+                </AccordionItem>
+              </AccordionRoot>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+      </TimelineRoot>
+    </Flex>
+    ) 
 }
