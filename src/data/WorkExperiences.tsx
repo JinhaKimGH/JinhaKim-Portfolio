@@ -28,7 +28,7 @@ export const experience_list = [
         icon: "untetherai-icon.jpeg",
         overview: "On the Chip Manager Firmware team, I focused on developing and optimizing firmware solutions, tackling hardware-software integration challenges, and ensuring seamless communication between software and hardware components.",
         points: [
-            "<p>Rapidly learned firmware development and CLI command design to independently implement multi-bank read/write operations and packet initialization features, creating a linker script and makefile to generate ELF files, ensuring seamless testing and hardware compatibility.</p>",
+            "<p>Rapidly learned firmware development and <strong>CLI command design</strong> to independently implement multi-bank read/write operations and packet initialization features, creating a linker script and makefile to generate <strong>ELF</strong> files, ensuring seamless testing and hardware compatibility.</p>",
             "<p>Solved complex hardware-software integration challenges to develop robust chip socket connection, socket configuration, receive interrupt handling, and data transmission.</p>"
         ],
         location: "Toronto, Ontario, Canada"
@@ -54,7 +54,7 @@ export const experience_list = [
         icon: "principleinc-icon.png",
         overview: "As a Software Developer Intern, I worked on developing and testing web forms for event management, addressing bugs, and improving test coverage to ensure the reliability and functionality of product releases.",
         points: [
-            "<p>Developed and launched a client-facing form using <strong>JavaScript and HTML</strong> to facilitate seamless event content submission, quickly learning new technologies and adapting to the evolving project requirements to meet client needs.</p>",
+            "<p>Developed and launched a client-facing form using <strong>JavaScript</strong> and <strong>HTML</strong> to facilitate seamless event content submission, quickly learning new technologies and adapting to the evolving project requirements to meet client needs.</p>",
             "<p>Proactively identified and mitigated bugs by independently testing forms, product releases, and databases, ensuring smooth functionality and improving the overall user experience. Contributed to a 15% increase in test coverage by thoroughly validating user inputs, email sending/receiving, and database interactions with <strong>SQL</strong, significantly enhancing the reliability of product releases.</P"
         ],
         location: "Richmond Hill, Ontario, Canada"

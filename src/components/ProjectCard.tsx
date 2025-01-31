@@ -94,7 +94,7 @@ export default function ProjectCard(props: { project: Project, index : number}):
           </Card.Body>
           <Card.Footer justifyContent="space-between" alignItems="center" height="10">
             <Link href={project.link} target="_blank" colorPalette="green">
-              <Text fontSize={{base: "sm", md: "1rem", lg: "1rem"}}>
+              <Text fontSize={{base: "xs", md: "1rem", lg: "1rem"}}>
                   Visit GitHub
               </Text> 
               <LuExternalLink/>
@@ -102,9 +102,8 @@ export default function ProjectCard(props: { project: Project, index : number}):
             {
               project.live && 
               <Button 
-                
                 colorPalette="green"
-                size="sm"
+                size={{base: "xs", md: "sm", lg: "sm"}}
               >
                 <a href={project.live} target="_blank">
                   Live Demo

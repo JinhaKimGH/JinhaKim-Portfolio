@@ -45,7 +45,7 @@ export default function Navbar(): JSX.Element{
             justifyContent="center" 
             alignItems="center" 
             position="relative"
-            marginTop={{base: "6vh", lg: "4vh"}}
+            marginTop={{base: "4vh", lg: "4vh"}}
         >
             {/* Name */}
             <Heading

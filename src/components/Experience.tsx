@@ -30,12 +30,12 @@ export default function Experience(): JSX.Element{
     <Flex 
       direction="column" 
       alignItems="center"
-      mt="10vh"
     >
       <Heading
         fontSize="2xl"
         width={{base: "90%", "md": "70%", "lg": "70%"}}
         textAlign={{base: "center", md: "center", lg: "left"}}
+        mt="6vh"
       >
         Experiences
       </Heading>
@@ -95,7 +95,7 @@ export default function Experience(): JSX.Element{
                   </h2>
                   <AccordionItemContent pb={4}>
                     {experience.points.map((point, index) => (
-                      <Flex key={index} align="flex-start" marginBottom="4">
+                      <Flex key={index} align="flex-start" marginBottom="4" fontSize="sm">
                         <span style={{ marginRight: '5px' }}>•</span>
                         <span>
                           {parse(point, {

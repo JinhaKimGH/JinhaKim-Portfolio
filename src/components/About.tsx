@@ -19,9 +19,8 @@ export default function About(): JSX.Element{
         direction="column" 
         alignItems="center" 
         gap={{sm: "10px", md: "20px", lg: "20px"}} 
-        mt="10vh"
       >
-        <Image rounded="md" src='jinhakim.jpg' alt="Jinha Kim" height="250px"/>
+        <Image rounded="md" src='jinhakim.jpg' alt="Jinha Kim" height="250px" mt="6vh"/>
         <Heading size={{ base: "2xl", md: "3xl", lg: "5xl" }} mt="4">
         <Highlight query="Jinha Kim" styles={{ color: "#2ECC71" }}>
             Hi there, I'm Jinha Kim! 👋

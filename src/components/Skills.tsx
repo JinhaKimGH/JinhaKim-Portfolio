@@ -17,7 +17,7 @@ export default function Skills(): JSX.Element{
       alignItems={{base: "center", md: "center", lg: "start"}}
       justifyContent="space-between"
       padding="0.5rem"
-      mt="150px"
+      mt={{base: "30px", md: "30px", lg: "150px"}}
       width={{base: "100%", md: "80%", lg: "80%"}}
       ml="auto"
       mr="auto"

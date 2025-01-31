@@ -15,13 +15,13 @@ export default function Projects(): JSX.Element{
         <Flex 
           direction="column" 
           alignItems="center"
-          mt="10vh"
           maxWidth="100vw"
         >
           <Heading
             fontSize="2xl"
             width={{base: "87%", "md": "79%", "lg": "81%"}}
             textAlign={{base: "center", md: "center", lg: "left"}}
+            mt="6vh"
           >
             Projects
           </Heading>
