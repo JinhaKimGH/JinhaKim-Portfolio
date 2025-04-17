@@ -52,15 +52,17 @@ export default function ProjectCard(props: { project: Project, index : number}):
             <Card.Title fontSize="1.25rem">{project.name}</Card.Title>
             <Card.Description marginBottom="2">
               {/* DialogTrigger wrapped around Image */}
-              <DialogTrigger>
-                <Image 
-                    src={project.image} 
-                    rounded="2xl" 
-                    marginBottom="5" 
-                    width="100%" 
-                    cursor="pointer" // Indicate it's clickable
-                />
-              </DialogTrigger>
+              { project.image &&
+                <DialogTrigger>
+                  <Image 
+                      src={project.image} 
+                      rounded="2xl" 
+                      marginBottom="5" 
+                      width="100%" 
+                      cursor="pointer" // Indicate it's clickable
+                  />
+                </DialogTrigger>
+              }
               {parse(project.description)}
             </Card.Description>
             <Flex wrap="wrap" gap="3">
@@ -93,12 +95,21 @@ export default function ProjectCard(props: { project: Project, index : number}):
             </Flex>
           </Card.Body>
           <Card.Footer justifyContent="space-between" alignItems="center" height="10">
-            <Link href={project.link} target="_blank" colorPalette="green">
-              <Text fontSize={{base: "xs", md: "1rem", lg: "1rem"}}>
-                  Visit GitHub
-              </Text> 
-              <LuExternalLink/>
-            </Link>
+            { project.link ? 
+              <Link href={project.link} target="_blank" colorPalette="green">
+                <Text fontSize={{base: "xs", md: "1rem", lg: "1rem"}}>
+                    Visit GitHub
+                </Text> 
+                <LuExternalLink/>
+              </Link>
+              : 
+              <Link href={"https://uwaterloo.ca/academic-integrity/integrity-students/intellectual-property-and-copyright"} target="_blank" colorPalette="green">
+                <Text fontSize={{base: "xs", md: "1rem", lg: "1rem"}}>
+                  Course Project – Not Publicly Available
+                </Text> 
+                <LuExternalLink/>
+              </Link>
+            }
             {
               project.live && 
               <Button 
@@ -113,15 +124,17 @@ export default function ProjectCard(props: { project: Project, index : number}):
           </Card.Footer>
         </Card.Root>
         {/* Dialog to display the image in a larger size */}
-        <DialogContent maxWidth="70vw" minWidth="40vw">
-          <DialogHeader />
-          <DialogBody>
-              <Image src={project.image} alt={project.name} width="70vw" />
-          </DialogBody>
-          <DialogFooter>
-            <DialogCloseTrigger />
-          </DialogFooter>
-        </DialogContent>
+        { project.image &&
+          <DialogContent maxWidth="70vw" minWidth="40vw">
+            <DialogHeader />
+            <DialogBody>
+                <Image src={project.image} alt={project.name} width="70vw" />
+            </DialogBody>
+            <DialogFooter>
+              <DialogCloseTrigger />
+            </DialogFooter>
+          </DialogContent>
+        }
       </DialogRoot>
     )
 }
