@@ -53,7 +53,7 @@ export const projects = [
     },
     {
       name: "MLB Hall of Fame Classifier",
-      description: "<p>Developed a high-accuracy Decision Tree classifier to predict Baseball Hall of Fame inductions using the Lahman Database (1871–2023). Leveraging <strong>Python</strong>, <strong>MySQL</strong>, and <strong>scikit-learn</strong>, I performed extensive data cleaning and feature engineering with <strong>pandas</strong and SQL queries. Through iterative optimization of features and model tuning, the classifier achieved 95% accuracy in predicting HOF inductees.</p>",
+      description: "<p>Developed a high-accuracy (<strong>96%</strong>) Decision Tree classifier to predict Baseball Hall of Fame inductions using the Lahman Database (1871–2023). Leveraging <strong>Python</strong>, <strong>MySQL</strong>, and <strong>scikit-learn</strong>, I performed extensive data cleaning and feature engineering with <strong>pandas</strong and SQL queries. Through iterative optimization of features and model tuning, the classifier achieved 95% accuracy in predicting HOF inductees.</p>",
       languages: ["Python", "Scikit-Learn", "Machine Learning", "MySQL", "Pandas"],
       image: "",
       link: "",

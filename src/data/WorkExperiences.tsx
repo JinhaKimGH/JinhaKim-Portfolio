@@ -4,8 +4,11 @@ export const experience_list = [
         company: "Capital One",
         date: "January 2025 – April 2025",
         icon: "capitalone-icon.png",
-        overview: "Customer Acquisitions Team",
-        points: [],
+        overview: "During my time with Capital One's Customer Acquisitions Team, I enhanced the customer experience by designing and implementing new UI components and pages, while also strengthening our testing infrastructure by introducing scheduled automated tests.",
+        points: [
+          "<p>Reduced manual QA effort and operational costs by <strong>60%</strong> for testing by automating test scheduling and reporting using a fully serverless architecture–developed with <strong>TypeScript</strong> and <strong>Amazon CDK</strong> leveraging <strong>AWS Lambda</strong>, <strong>SQS</strong>, and <strong>SNS</strong>–resulting in fewer human error and more reliable test coverage.</p>",
+          "<p>Redesigned <strong>40%</strong> of customer-facing pages (<strong>~250K</strong> monthly visitors), including a key CTA page, in collaboration with the design team—resulting in a <strong>7.5% increase</strong> in conversions to the application page through improved UX, A/B testing, and component optimization.</p>"
+        ],
         location: "Toronto, Ontario, Canada"
     },
     {
