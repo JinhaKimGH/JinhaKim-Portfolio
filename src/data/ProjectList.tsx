@@ -16,7 +16,7 @@ export const projects = [
         languages: ["React", "TypeScript", "SpringBoot", "Java", "MySQL"],
         image: "basketballcourtfinder-screenshot.png",
         link: "https://github.com/JinhaKimGH/Basketball-Court-Finder",
-        live: "https://jinhakimgh.github.io/Basketball-Court-Finder/"
+        live: ""
     },
 
     {
