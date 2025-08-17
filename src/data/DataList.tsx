@@ -51,7 +51,7 @@ const nameToIcon: Record<string, string> = {
   "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   "Linux": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-  "Hugging Face": "https://api.iconify.design/logos:hugging-face-icon.svg",
+  "Hugging Face": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤗%3C/text%3E%3C/svg%3E",
 };
 
 
