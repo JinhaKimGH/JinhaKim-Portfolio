@@ -29,6 +29,8 @@ type LanguageNames = keyof typeof nameToBlankIcon;
 export default function ProjectCard(props: { project: Project, index : number}): JSX.Element{
     const hoverBgColor = useColorModeValue('gray.100', 'gray.900');
     const hoverBoxShadow = useColorModeValue('lg', 'dark-lg');
+    const placeholderBg = useColorModeValue('gray.50', 'gray.800');
+    const placeholderTextColor = useColorModeValue('gray.400', 'gray.500');
 
     const {project, index} = props;
 
@@ -38,31 +40,51 @@ export default function ProjectCard(props: { project: Project, index : number}):
         <Card.Root 
           key={index} 
           height="auto" 
-          minHeight="100%" 
+          minHeight="500px" 
           width={{ base: "90%", md: "80%", lg: "30%"}}
           variant="elevated"
           mb="20px"
           rounded="2xl"
+          display="flex"
+          flexDirection="column"
           _hover={{
           backgroundColor: hoverBgColor,
           boxShadow: hoverBoxShadow, 
           }}
         >
-          <Card.Body gap="2">
+          <Card.Body gap="2" flex="1" display="flex" flexDirection="column">
             <Card.Title fontSize="1.25rem">{project.name}</Card.Title>
-            <Card.Description marginBottom="2">
-              {/* DialogTrigger wrapped around Image */}
-              { project.image &&
+            
+            {/* Fixed height image container */}
+            <Flex
+              height={{base: "150px", sm: "200px", md: "300px", lg: "200px"}}
+              width="100%"
+              marginBottom={{base: "0", lg: "4"}}
+              justifyContent="center"
+              alignItems="center"
+              bg={project.image ? "transparent" : placeholderBg}
+              rounded="2xl"
+              overflow="hidden"
+            >
+              {project.image ? (
                 <DialogTrigger>
                   <Image 
-                      src={project.image} 
-                      rounded="2xl" 
-                      marginBottom="5" 
-                      width="100%" 
-                      cursor="pointer" // Indicate it's clickable
+                    src={project.image} 
+                    rounded="2xl" 
+                    width="100%" 
+                    height="100%"
+                    objectFit="cover"
+                    cursor="pointer"
                   />
                 </DialogTrigger>
-              }
+              ) : (
+                <Text color={placeholderTextColor} fontSize="sm" textAlign="center">
+                  No preview available
+                </Text>
+              )}
+            </Flex>
+            
+            <Card.Description marginBottom="2" flex="1">
               {parse(project.description)}
             </Card.Description>
             <Flex wrap="wrap" gap="3">
@@ -94,7 +116,7 @@ export default function ProjectCard(props: { project: Project, index : number}):
                 }
             </Flex>
           </Card.Body>
-          <Card.Footer justifyContent="space-between" alignItems="center" height="10">
+          <Card.Footer justifyContent="space-between" alignItems="center" height="auto" mt="auto" pt="4">
             { project.link ? 
               <Link href={project.link} target="_blank" colorPalette="green">
                 <Text fontSize={{base: "xs", md: "1rem", lg: "1rem"}}>
@@ -102,6 +124,18 @@ export default function ProjectCard(props: { project: Project, index : number}):
                 </Text> 
                 <LuExternalLink/>
               </Link>
+                             : 
+               project.progress ?
+               <Text 
+                 fontSize={{base: "xs", md: "1rem", lg: "1rem"}}
+                 color="orange.500"
+                 bg="orange.100"
+                 px="3"
+                 rounded="lg"
+                 fontWeight="medium"
+               >
+                 In Development
+               </Text> 
               : 
               <Link href={"https://uwaterloo.ca/academic-integrity/integrity-students/intellectual-property-and-copyright"} target="_blank" colorPalette="green">
                 <Text fontSize={{base: "xs", md: "1rem", lg: "1rem"}}>

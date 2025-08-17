@@ -14,6 +14,7 @@ export interface Project{
     image: string
     link: string
     live: string | undefined
+    progress: boolean
 }
 
 export interface AwardType{

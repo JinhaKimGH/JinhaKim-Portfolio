@@ -1,6 +1,15 @@
 // File that contains list of all the projects
 
 export const projects = [
+    { 
+        name: "Stamina Sense",
+        description: "<p><strong>StaminaSense</strong> is a wearable system that uses machine learning on biometric data like heart rate, movement, and temperature to give personalized training and recovery recommendations, helping coaches reduce injuries and boost performance! 🤖🏃‍♂️</p>",
+        languages: ["Python", "Hugging Face", "TypeScript", "React Native", "Node.js", "JavaScript", "HTML", "CSS"],
+        image: "staminasense-screenshot.png",
+        link: "",
+        live: "",
+        progress: true,
+    },
     {
         name: "Rendezvous Radar",
         description: "<p><strong>Rendezvous Radar</strong> is a web app which lets users search for activities by selecting categories or entering a text prompt, which is analyzed by a large language model to generate relevant results. 🔍🤖</p>",
@@ -16,7 +25,7 @@ export const projects = [
         languages: ["React", "TypeScript", "SpringBoot", "Java", "MySQL"],
         image: "basketballcourtfinder-screenshot.png",
         link: "https://github.com/JinhaKimGH/Basketball-Court-Finder",
-        live: "https://jinhakimgh.github.io/Basketball-Court-Finder/"
+        live: "" // https://jinhakimgh.github.io/Basketball-Court-Finder/
     },
 
     {

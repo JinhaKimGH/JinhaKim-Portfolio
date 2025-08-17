@@ -1,5 +1,14 @@
 export const experience_list = [
     {
+        title: "Software Developer Intern",
+        company: "Snowflake",
+        date: "September 2025 – December 2025",
+        icon: "snowflake-icon.png",
+        overview: "Database Security, IAM Team",
+        points: [],
+        location: "Bellevue, Washington, United States"
+    },
+    {
         title: "Full Stack Developer Intern",
         company: "Capital One",
         date: "January 2025 – April 2025",
