@@ -102,7 +102,7 @@ export const projects = [
       live: ""
     },
     {
-      name: "Distributed Data Processing Project",
+      name: "Movie Similarity Project",
       description: "<p>Implemented large-scale data processing workflows using <strong>Apache Spark</strong> to compute <strong>movie similarity scores</strong> across a dataset. Designed Spark applications that leverage parallel processing to efficiently generate pairwise similarity metrics and output results in a distributed, fault-tolerant manner.</p>",
       languages: ["Scala", "Apache Spark", "Distributed Computing", "Fault Tolerance"],
       image: "",
@@ -110,7 +110,7 @@ export const projects = [
       live: ""
     },
     {
-      name: "Remote Procedure Call System",
+      name: "Distributed Password Hashing Service",
       description: "<p>Developed a <strong>Remote Procedure Call (RPC)</strong> system using <strong>Apache Thrift</strong> and <strong>Java</strong> to implement a distributed <strong>bcrypt password hashing service</strong>. Built front-end and back-end nodes that handle client requests, perform secure password hashing, and coordinate across multiple processes.</p>",
       languages: ["Java", "Apache Thrift", "RPC", "Distributed Computing", "Client-Server Communication"],
       image: "",
@@ -118,7 +118,7 @@ export const projects = [
       live: ""
     },
     {
-      name: "Distributed Coordinator Project",
+      name: "Fault-Tolerant Key-Value Store",
       description: "<p>Implemented a fault-tolerant <strong>key-value store</strong> in <strong>Java</strong> with <strong>primary–backup replication</strong>, using <strong>Apache ZooKeeper</strong> and Curator for coordination. Designed mechanisms for <strong>leader election</strong> and <strong>failure detection</strong>, ensuring consistency and reliability under replica crashes. Applied distributed coordination primitives including ephemeral and sequential znodes, watches, and client-server communication via <strong>Thrift</strong>.</p>",
       languages: ["Java", "Apache ZooKeeper", "Curator", "Distributed Computing", "Client-Server Communication"],
       image: "",
@@ -126,7 +126,7 @@ export const projects = [
       live: ""
     },
     {
-      name: "MPI-Based Parallel Computing Project",
+      name: "Parallel Matrix Multiplication",
       description: "<p>Developed a distributed <strong>matrix multiplication</strong> system using <strong>MPI</strong>, enabling multiple processes to compute large square matrix products in parallel. The solution partitions input matrices across processes, performs concurrent computation, and combines partial results into the final output, demonstrating scalable high-performance computing.</p>",
       languages: ["C", "MPI", "Parallel Computing"],
       image: "",
