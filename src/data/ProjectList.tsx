@@ -15,8 +15,8 @@ export const projects = [
       description: "<p><strong>BudgetBuddy</strong> is an AI-powered budgeting app that uses receipt scanning (OCR API) and <strong>Gemini</strong> to parse and categorize transactions, helping users track spending and manage budgets efficiently across categories and time periods. 🤖💰</p>",
       languages: ["Java", "Spring Boot", "React Native", "TypeScript", "OCR", "LLM", "HTML", "CSS"],
       image: "",
-      link: "",
-      live: "",
+      link: "https://github.com/Team-SKJEM",
+      live: "https://team-skjem.github.io/budgetbuddy-frontend/",
       progress: true,
     },
     {
